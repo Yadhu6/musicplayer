@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:musicplayer/controllers/player_controller.dart';
+import 'package:musicplayer/views/player.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
 class Home extends StatelessWidget {
@@ -90,6 +91,9 @@ class Home extends StatelessWidget {
                                     )
                                   : null,
                               onTap: () {
+                                Get.to(()=> Player(data: snapshot.data!,),
+                                transition: Transition.downToUp
+                                );
                                 controller.playSong(
                                     snapshot.data![index].uri, index);
                               },
