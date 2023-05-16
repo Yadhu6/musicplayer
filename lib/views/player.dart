@@ -43,7 +43,6 @@ class Player extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Obx(()=>
                Expanded(
                   child: Container(
                 alignment: Alignment.center,
@@ -137,7 +136,7 @@ class Player extends StatelessWidget {
                   ],
                 ),
               )),
-            ),
+
           ],
         ),
       ),
